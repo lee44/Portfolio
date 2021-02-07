@@ -83,6 +83,7 @@ img{
 .has-margin-right{
     margin-right: 5rem;
 }
+
 /*End reusable*/
 
 /*Start header*/
@@ -256,7 +257,7 @@ li{
 }
 /*End about*/
 
-/*Start services*/
+/*Start skills*/
 .my-skills{
     margin-top: 10rem;
     display: grid;
@@ -295,7 +296,53 @@ li{
     margin: auto;
     transform: rotate(-45deg);
 }
-/*End services*/
+
+.technical-skills{
+    /* https://stackoverflow.com/questions/42613359/how-does-flex-wrap-work-with-align-self-align-items-and-align-content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.technical-skills .subheader-container{
+    width: 70%;
+}
+
+.technical-skills .subheader{
+    background-color: #00001a;
+    height: 4rem;
+    position:relative;
+}
+
+.technical-skills .subheader p{
+    position: absolute;
+    top:50%; /*Place it halfway down container. 50% means 50% of the height of the container*/
+    left:50%; /*Place it halfway across container*/
+    transform: translate(-50%,-50%); /*Move element up 50% of its height and width*/
+    font-weight: bold;
+    color:white;
+}
+
+.technical-skills .item-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.technical-skills .items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.technical-skills .i{
+    font-size: 5rem;
+}
+/*End skills*/
 
 /*Start portfolio*/
 .portfolio-item{
@@ -342,121 +389,14 @@ li{
 }
 /*End Portfolio*/
 
-/*Start timeline*/
-.timeline ul {
-    border-left: 4px solid #ffe838;
-    border-radius: .8rem;
-    background-color: rgba(0,0,0,0,.05);
-    margin: 0 auto;
-    position:relative;
-    padding: 5rem;
-    list-style: none;
-    text-align: left;
-    width: 70%;
-}
-
-.timeline h1{
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    opacity: .3;
-}
-
-.timeline .date{
-    border-bottom: 1px solid rgba(255,255,255,.1);
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    position:relative;
-}
-
-.timeline .date:last-of-type{
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border: none;
-}
-
-.timeline .date::before,
-.timeline .date::after{
-    position: absolute;
-    display: block;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.timeline .date::before{
-    content: attr(data-date);
-    left: -21rem;
-    text-align: right;
-    min-width: 12rem;
-    font-size: 1.5rem;
-}
-
-.timeline .date::after{
-    content: '';
-    box-shadow: 0 0 0 4px #fd57bf;
-    border-radius: 100%;
-    left: -7.9rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: #313534;
-}
-/*End timeline*/
-
-/*Start contact*/
-.contact{
-    background-color: #221e3f;
-}
-
-form{
-    width:70%;
-    margin:0 auto;
-}
-
-form label{
-    font-size: 1.5rem;
-}
-
-input,select,textarea{
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 5px;
-    border: none;
-    outline-color: #fd57bf;
-}
-
-input[type="submit"]{
-    width: initial;
-    background-color: #fd57bf;
-    color: #eee;
-    padding: 1rem 2rem;
-    border-radius: .8rem;
-    cursor: pointer;
-    transition: background-color 650ms;
-}
-
-inoput[type="submit"]:hover{
-    color: #221e3f;
-    background-color: #ffe838;
-}
-/*End contact*/
-
-/*Start footer*/
-.copyright{
-    width: 100%;
-    text-align:center;
-    background-color: #16162d;
-    padding: 2rem 0;
-    position: relative;
-}
-
+/*Start Page Scroller*/
 .up{
-    position:absolute;
+    position: fixed;
     width: 5rem;
     height: 5rem;
     background-color: #eee;
-    top: -2.5rem;
-    right: 5rem;
+    bottom: 2.5rem;
+    right: 2.5rem;
     border-radius: 100%;
     display:flex;
     animation: pulse 2s infinite;
@@ -468,11 +408,7 @@ inoput[type="submit"]:hover{
     margin: auto;
     cursor:pointer;
 }
-
-.copyright p{
-    font-size:1.4rem;
-}
-/*End footer*/
+/*End Page Scroller*/
 
 /*Start animations*/
 @keyframes pulse{
