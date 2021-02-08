@@ -92,6 +92,43 @@ header{
     height: 100vh;
 }
 
+.top-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: #00001a;
+    z-index: 99;
+}
+
+.top-nav .nav-list{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-nav .nav-list div{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.top-nav .nav-link{
+    font-family: 'The Historia Demo',sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.nav-list div:hover,
+.nav-list div:focus{
+    background-color: #1c1c29;
+}
+
 .hidden-top-nav{
     width: 100%;
     height: 100vh;
@@ -115,6 +152,7 @@ header{
 
 li{
     margin:0 2rem;
+    list-style: none;
 }
 
 .hidden-nav-link{
@@ -468,6 +506,10 @@ li{
         font-size: 1.7rem;
     }
 
+    .top-nav{
+        display: none;
+    }
+
     .menu-toggler{
         visibility: visible;
         right: 2rem;
@@ -523,6 +565,10 @@ li{
     }
 
     @media screen and (max-width: 600px){
+        .top-nav{
+            display: none;            
+        }
+
         .menu-toggler{
             visibility: visible;
             right: 2rem;
