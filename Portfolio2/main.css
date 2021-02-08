@@ -303,10 +303,12 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
 }
 
 .technical-skills .subheader-container{
-    width: 70%;
+    width: 50%;
+    min-width: 245px;
 }
 
 .technical-skills .subheader{
@@ -316,6 +318,7 @@ li{
 }
 
 .technical-skills .subheader p{
+    white-space: nowrap;
     position: absolute;
     top:50%; /*Place it halfway down container. 50% means 50% of the height of the container*/
     left:50%; /*Place it halfway across container*/
@@ -337,10 +340,35 @@ li{
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    margin: 1rem 1.5rem;
 }
 
-.technical-skills .i{
+.technical-skills i{
     font-size: 5rem;
+}
+
+.jquery-icon{
+    background: url('images/jquery.png');
+    height: 50px;
+    width: 50px;
+    display: block; 
+    border-radius: 5px;
+}
+
+.django-icon{
+    background: url('images/django.png');
+    height: 50px;
+    width: 50px;
+    display: block; 
+    border-radius: 10px;
+}
+
+.photoshop-icon{
+    background: url('images/photoshop.png');
+    height: 50px;
+    width: 50px;
+    display: block; 
+    border-radius: 10zpx;
 }
 /*End skills*/
 
