@@ -2,12 +2,12 @@ $(document).ready(function () {
     $('.menu-toggler').on('click',function(){
         // toogleClass adds or removes a class
         $(this).toggleClass('open');
-        $('.top-nav').toggleClass('open');
+        $('.hidden-top-nav').toggleClass('open');
     })
 
-    $('.top-nav .nav-link').on('click',function(){
+    $('.hidden-top-nav .hidden-nav-link').on('click',function(){
         $('.menu-toggler').removeClass('open');
-        $('.top-nav').toggleClass('open');
+        $('.hidden-top-nav').toggleClass('open');
     })
 
     $('nav a[href*="#"]').on('click',function(){
