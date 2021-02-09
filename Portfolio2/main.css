@@ -236,7 +236,7 @@ li{
 }
 
 .landing-text img{
-    width: 300px;
+    width: 350px;
     height: 300px;
     border-radius: 50%;
 }
@@ -253,6 +253,23 @@ li{
 .landing-text h6{
     font-size: 2rem;
     font-weight: 300;
+}
+
+.social-media{
+    margin-top:5rem;
+}
+
+.social-media i{
+    font-size: 5rem;
+    transition: color 650ms;
+}
+
+.fa-facebook-square:hover{
+    color: #4267b2;
+}
+
+.fa-twitter-square:hover{
+    color: #ea4c89;
 }
 /*End header*/
 
@@ -286,23 +303,6 @@ li{
 
 .about-details{
     flex:1;
-}
-
-.social-media{
-    margin-top:5rem;
-}
-
-.social-media i{
-    font-size: 5rem;
-    transition: color 650ms;
-}
-
-.fa-facebook-square:hover{
-    color: #4267b2;
-}
-
-.fa-twitter-square:hover{
-    color: #ea4c89;
 }
 /*End about*/
 
@@ -477,6 +477,7 @@ li{
     border-radius: 100%;
     display:flex;
     animation: pulse 2s infinite;
+    transition: ease-in .25s;
 }
 
 .up i{
@@ -510,7 +511,7 @@ li{
 /*End animations*/
 
 /*Start media queries*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     body{
         background: url("images/sitebg2.jpg") no-repeat center fixed;
         background-size: cover;
@@ -568,18 +569,6 @@ li{
 
     .icon-container i{
         font-size: 4rem;
-    }
-
-    .timeline ul{
-        margin: 0 0 0 auto;
-    }
-
-    .timeline .date::before{
-        left: -21rem;
-    }
-
-    .timeline .data::after{
-        left: -5.9rem;
     }
 
     @media screen and (max-width: 600px){
