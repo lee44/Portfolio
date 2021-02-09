@@ -22,6 +22,18 @@ $(document).ready(function () {
         },500);
     })
 
+    up = document.getElementById("up");
+    var myScrollFunc = function() {
+        var y = window.scrollY;
+        if (y >= 400) {
+          up.className = "up show"
+        } else {
+          up.className = "up hide"
+        }
+    };
+      
+    window.addEventListener("scroll", myScrollFunc);
+
     AOS.init({
         easing:'ease',
         duration: 1800,
