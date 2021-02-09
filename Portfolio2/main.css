@@ -475,7 +475,7 @@ li{
     bottom: 2.5rem;
     right: 2.5rem;
     border-radius: 100%;
-    display:flex;
+    display:none;
     animation: pulse 2s infinite;
     transition: ease-in .25s;
 }
@@ -485,14 +485,6 @@ li{
     font-size: 2rem;
     margin: auto;
     cursor:pointer;
-}
-
-.hide {
-    opacity: 0;
-}
-
-.show {
-    opacity: 1;
 }
 /*End Page Scroller*/
 
