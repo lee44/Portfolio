@@ -256,7 +256,11 @@ li{
 }
 
 .social-media{
-    margin-top:5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .social-media i{
@@ -509,14 +513,6 @@ li{
         background-size: cover;
     }
 
-    .landing-text h1{
-        font-size: 15rem;
-    }
-    
-    .landing-text h6{
-        font-size: 1.7rem;
-    }
-
     .top-nav{
         display: none;
     }
@@ -571,14 +567,6 @@ li{
         .menu-toggler{
             visibility: visible;
             right: 2rem;
-        }
-
-        .landing-text h1{
-            font-size: 8rem;
-        }
-
-        .landing-text h6{
-            font-size: 1.4rem;
         }
 
         .hidden-nav-link{
