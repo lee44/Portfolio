@@ -14,6 +14,9 @@ $(document).ready(function () {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 100
         },500);
+
+        $('nav a[href]').removeClass('active');
+        $(this).toggleClass('active');    
     })
 
     $('#up').on('click',function(){

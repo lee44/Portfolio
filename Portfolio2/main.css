@@ -19,7 +19,7 @@ body{
 }
 
 section{
-    padding: 6rem;
+    padding: 5rem;
 }
 
 a{
@@ -116,7 +116,7 @@ header{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 1.5rem;
+    margin: 0 1.5rem;
 }
 
 .top-nav .nav-link{
@@ -125,9 +125,33 @@ header{
     padding: 1rem;
 }
 
-.nav-list div:hover,
+/* .nav-list div:hover,
 .nav-list div:focus{
     background-color: #1c1c29;
+} */
+
+.top-nav .nav-list .nav-items{
+    position: relative;
+}
+.top-nav .nav-list a::before{
+    content:'';
+    height: 3px;
+    background-color: white;
+    width: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    transition: all .5s ease;
+}
+
+.top-nav .nav-list a:hover::before{
+    width: 95%;
+    left:0;
+}
+
+.top-nav .nav-list a.active::before{
+    width:95%;
+    left: 0;
 }
 
 .hidden-top-nav{
