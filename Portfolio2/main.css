@@ -223,10 +223,11 @@ li{
 }
 
 .landing-text{
-    width: 100%;
+    
     height: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -533,6 +534,10 @@ li{
     .hidden-nav-link{
         font-size:4.5rem;
     }
+
+    /* .landing-text{
+        flex-direction: column;
+    } */
 
     .about-heading h1{
         font-size: 8rem;
