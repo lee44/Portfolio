@@ -29,7 +29,6 @@ a{
 
 p{
     font-size: 1.8rem;
-    font-weight: 300
 }
 
 hr{
@@ -48,7 +47,7 @@ hr{
 
 .section-heading{
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 
 .section-heading h1{
@@ -347,7 +346,6 @@ li{
 
 /*Start skills*/
 .my-skills{
-    margin-top: 10rem;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
     grid-gap: 2.5rem;
@@ -464,7 +462,7 @@ li{
 .portfolio-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,300px));
-    grid-gap: 10rem;
+    grid-gap: 5rem;
     justify-content: center;
 }
 
