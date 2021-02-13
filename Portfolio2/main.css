@@ -52,7 +52,7 @@ hr{
 
 .section-heading h1{
     font-size: 3.5rem;
-    color: rgba(255,255,255,.3);
+    color: #8A7AFF;
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
@@ -80,10 +80,6 @@ hr{
     font-weight: 300;
 }
 
-.has-margin-right{
-    margin-right: 5rem;
-}
-
 /*End reusable*/
 
 /*Start header*/
@@ -97,7 +93,8 @@ header{
     top: 0;
     width: 100%;
     height: 6rem;
-    background-color: #00001a;
+    /* background-color: #00001a; */
+    background-color: #221e3f;
     z-index: 99;
 }
 
@@ -128,10 +125,12 @@ header{
 .top-nav .nav-list .nav-items{
     position: relative;
 }
+
+/* Use ::before to not modify the default state of <a> */
 .top-nav .nav-list a::before{
     content:'';
     height: 3px;
-    background-color: white;
+    background-color: #8A7AFF;
     width: 0px;
     position: absolute;
     right: 0;
@@ -139,9 +138,17 @@ header{
     transition: all .5s ease;
 }
 
+.top-nav .nav-list a:hover{
+    color: #8A7AFF;
+}
+
 .top-nav .nav-list a:hover::before{
     width: 95%;
     left:0;
+}
+
+.top-nav .nav-list a.active{
+    color: #8A7AFF;
 }
 
 .top-nav .nav-list a.active::before{
@@ -183,7 +190,7 @@ li{
 
 .hidden-nav-link:hover,
 .hidden-nav-link:focus{
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to right, #da22ff, #9733ee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -194,12 +201,11 @@ li{
 }
 
 .menu-toggler{
-    visibility: hidden;
     position: absolute;
-    top: 2.5rem;
-    right:2.5rem;
+    top: 2rem;
+    right:2rem;
     height: 4rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     cursor:pointer;
@@ -212,8 +218,7 @@ li{
 }
 
 .bar{
-    background: linear-gradient(to right, #ffe838, #fd57bf);
-    width: 4rem;
+    background: linear-gradient(to right, #da22ff, #9733ee);    width: 4rem;
     height: 4px;
     border-radius: .8rem;
 }
@@ -242,7 +247,6 @@ li{
 }
 
 .landing-text{
-    
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -264,8 +268,7 @@ li{
 
 .landing-text h1{
     font-size: 10rem;
-    background: linear-gradient(to top, #ffe838, #fd57bf);
-    -webkit-background-clip: text;
+    background: linear-gradient(to right, #da22ff, #9733ee);    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
     user-select:none;
@@ -599,8 +602,7 @@ li{
     }
 
     .menu-toggler{
-        visibility: visible;
-        right: 2rem;
+        display: flex;
     }
 
     .hidden-nav-list{
@@ -650,8 +652,7 @@ li{
         }
 
         .menu-toggler{
-            visibility: visible;
-            right: 2rem;
+            display: flex;
         }
 
         .hidden-nav-link{
