@@ -196,8 +196,8 @@ li{
 .menu-toggler{
     visibility: hidden;
     position: absolute;
-    top: 5rem;
-    right:5rem;
+    top: 2.5rem;
+    right:2.5rem;
     height: 4rem;
     display: flex;
     flex-direction: column;
@@ -441,7 +441,7 @@ li{
 .portfolio-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,300px));
-    grid-gap: 5rem;
+    grid-gap: 5rem 7rem;
     justify-content: center;
 }
 
@@ -453,11 +453,12 @@ li{
     background-color: #00001a;
     border-radius: 5px;
     padding-bottom: 1rem;
-    transition: box-shadow 500ms;
+    transition: all 200ms;
 }
 
 .portfolio-item:hover{
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
 }
 
 .portfolio-item img{
