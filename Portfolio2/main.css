@@ -113,7 +113,7 @@ header{
     background: linear-gradient(to right, #da22ff, #9733ee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    cursor: auto;
+    cursor: pointer;
 }
 
 .top-nav .nav-list .nav-items{
