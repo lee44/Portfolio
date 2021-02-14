@@ -584,7 +584,9 @@ li{
         }     
 
         .up{
-            right: 2rem;
+            right: 1rem;
+            width: 4rem;
+            height: 4rem;   
         }
     }
 }
