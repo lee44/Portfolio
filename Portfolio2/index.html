@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Joshua Lee Portfolio</title>
+    <title>Joshua Lee</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="main.css">
@@ -17,9 +17,11 @@
         </div>
         <nav class="top-nav">
             <div class="nav-list">
+                <div class="logo">JL</div>
                 <div class="nav-items"><a href="#home" class="nav-link active">Home</a></div>
                 <div class="nav-items"><a href="#skills" class="nav-link">Skills</a></div>
                 <div class="nav-items"><a href="#portfolio" class="nav-link">Portfolio</a></div>
+                <div class="nav-items"><a href="#contact" class="nav-link">Contact</a></div>
                 <div class="nav-items"><a href="images/resume.pdf" class="nav-link" target="_blank">Resume</a></div>
             </div>
         </nav>
@@ -28,6 +30,8 @@
                 <li><a href="#home" class="hidden-nav-link">Home</a></li>
                 <li><a href="#skills" class="hidden-nav-link">Skills</a></li>
                 <li><a href="#portfolio" class="hidden-nav-link">Porfolio</a></li>
+                <li><a href="#contact" class="hidden-nav-link">Contact</a></li>
+                <li><a href="images/resume.pdf" class="hidden-nav-link" target="_blank">Resume</a></li>
             </ul>
         </nav>
         <div class="landing-text">
@@ -35,7 +39,7 @@
                 <img src="images/profile-pic.jpg" alt="">
             </div>
             <div style="text-align:center;">
-                <h1>Joshua <br>Lee</h1>
+                <h1>Hi, I'm <br>Joshua <br>Lee</h1>
                 <h6>Web Developer</h6>
                 <div class="social-media">
                     <div><a href="https://www.facebook.com/jlee7772" class="icon-link"><i class="fab fa-facebook-square"></i></a></div>
@@ -201,28 +205,24 @@
                         </a>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="images/portitem1.jpeg">
-                    <h2>First Project</h2>
-                    <h2>Description of Project</h2>
-                    <hr>
-                    <div class="language">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span> 
-                        <span>JQuery</span>                     
-                    </div>
-                    <hr>
-                    <div class="source-container">
-                        <a href="https://github.com/lee44">
-                            <button class="github-btn"><i class="fab fa-github"></i> Github</button>
-                        </a>
-                        <a href="https://github.com/lee44">
-                            <button class="live-btn"><i class="fas fa-broadcast-tower"></i> Live</button>
-                        </a>
-                    </div>
-                </div>
             </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Contact</h1>
+                <h6>Lets work together</h6>
+            </div>
+            <form action="" data-aos="fade-up" data-aos-delay="300">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name..." required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email..." required>
+                <label for="subject">Subject:</label>
+                <textarea name="subject" id="subject" cols="10" rows="10"></textarea>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </section>
     <div class="up" id="up">

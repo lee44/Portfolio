@@ -28,6 +28,7 @@ $(document).ready(function () {
     up = document.getElementById("up");
     skills_coord = $('#skills').offset().top - 200;
     port_coord = $('#portfolio').offset().top - 200;
+    contact_coord = $('#contact').offset().top - 200;
     var myScrollFunc = function() {
         var y = window.scrollY;
 
@@ -49,10 +50,15 @@ $(document).ready(function () {
             $('nav a[href]').removeClass('active');
             $('nav a[href*="#skills"]').toggleClass('active');
         }
-        else if(y >= port_coord)
+        else if(y >= port_coord && y < contact_coord)
         {
             $('nav a[href]').removeClass('active');
             $('nav a[href*="#portfolio"]').toggleClass('active');
+        }
+        else if(y >= contact_coord)
+        {
+            $('nav a[href]').removeClass('active');
+            $('nav a[href*="#contact"]').toggleClass('active');
         }
     };
       
