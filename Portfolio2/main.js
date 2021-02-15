@@ -15,7 +15,7 @@ $(document).ready(function () {
             scrollTop: $($(this).attr('href')).offset().top - 50
         },500);
 
-        $('nav a[href]').removeClass('active');
+        $('nav a[href*="#"]').removeClass('active');
         $(this).toggleClass('active');    
     })
 
@@ -32,6 +32,8 @@ $(document).ready(function () {
     })
 
     up = document.getElementById("up");
+    arrow = document.getElementsByClassName('arrow');
+    
     skills_coord = $('#skills').offset().top - 200;
     port_coord = $('#portfolio').offset().top - 200;
     contact_coord = $('#contact').offset().top - 200;
@@ -40,9 +42,11 @@ $(document).ready(function () {
 
         // Toggles the Scroll Top Button
         if (y >= 400) {
-            up.style.display = "flex"
+            up.style.display = "flex";
+            arrow[0].style.display = "none";
         } else {
-            up.style.display = "none"
+            up.style.display = "none";
+            arrow[0].style.display = "block";
         }
 
         // Highlights the section in navbar based on scroll position
