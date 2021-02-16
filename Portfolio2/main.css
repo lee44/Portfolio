@@ -290,6 +290,9 @@ li{
     grid-template-columns: repeat(auto-fit,minmax(100px,100px));
     grid-gap: 1rem;
     justify-content: center;
+    border: 1px solid #7b72bd;
+    border-radius: 5px;
+    background-color: #00001a;
 }
 
 .technical-skills .items{
@@ -364,6 +367,7 @@ li{
     justify-content: center;
     flex-direction: column;
     background-color: #00001a;
+    border: 1px solid #7b72bd;
     border-radius: 5px;
     padding-bottom: 1rem;
     transition: all 200ms;
@@ -448,96 +452,114 @@ li{
 /*End Portfolio*/
 
 /*Start contact*/
-.contact .subcontainer{
+.contact .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(450px,450px));
     grid-gap: 7rem;
     justify-content: center;
 }
 
-.social-media{
+.contact form{
+    height: 375px;
+    border: 1px solid #7b72bd;
+    border-radius: 5px;
+    background-color: #00001a;
+}
+
+.contact .form-elements{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-start;
-    border: 1px solid white;
-    min-height: 350px;
+    align-items: center;
+    height: 90%;
+    margin: 1rem 2rem;
 }
 
-.social-media .social-header{
+.contact input{
     width: 100%;
+    height: 3.5rem;
+    padding: 0 .5rem;
+    border: none;
+    outline-color: #675CBF;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: #00001a;
 }
 
-.social-media h2{
+.contact textarea{
+    width: 100%;
+    height: 12rem;
+    padding: 0 .5rem;
+    border: none;
+    outline-color: #675CBF;
+    color: #00001a;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+
+.contact input[type="submit"]{
+    width: 50%;
+    background-color: #675CBF;
+    color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem auto;
+}
+
+.contact input[type="submit"]:hover{
+    color: white;
+    background-color: #7b72bd;
+}
+
+.contact .social-container{
+    border: 1px solid #7b72bd;
+    border-radius: 5px;
+    height: 375px;
+    background-color: #00001a;
+}
+
+.contact .social-header{
+    width: 100%;
+    height: 10%;
+    color: #7b72bd;
+    margin-top: 1rem;
+}
+
+.contact h2{
     font-size: 3rem;
     text-align: center;
 }
 
-.social-media .facebook-container{
+.contact .social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 90%;
+}
+
+.contact .icon-container{
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.social-media a{
     margin: 0 2rem;
 }
 
-.social-media span{
-    font-size: 1.75rem;
+.social-media a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
 }
 
 .social-media i{
     font-size: 4rem;
-    transition: color 650ms;
+    color: #7b72bd;
 }
 
-.fa-facebook-square:hover{
-    color: #3b5998;
-}
-
-.fa-twitter-square:hover{
-    color: #1DA1F2;
-}
-
-.fa-linkedin:hover{
-    color: #2867B2;
-}
-
-.fa-github-square:hover{
-    color: #6e5494;
-}
-
-form{
-    border: 1px solid white;
-}
-
-form label{
-    font-size: 1.5rem;
-}
-
-input,select,textarea{
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 5px;
-    border: none;
-    outline-color: #fd57bf;
-}
-
-input[type="submit"]{
-    width: initial;
-    background-color: #fd57bf;
-    color: #eee;
-    padding: 1rem 2rem;
-    border-radius: .8rem;
-    cursor: pointer;
-    transition: background-color 650ms;
-}
-
-input[type="submit"]:hover{
-    color: #221e3f;
-    background-color: #ffe838;
+.social-media a:hover{
+    color: #7b72bd;
 }
 /*End contact*/
 
