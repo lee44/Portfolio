@@ -20,6 +20,7 @@ body{
 
 section{
     padding: 4rem 2.5rem;
+    margin: 15rem 0;
 }
 
 a{
@@ -305,7 +306,7 @@ li{
 
 /*Start About*/
 .about{
-    height: 100vh;
+    
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -404,9 +405,13 @@ border-radius: 6px;
 /*End About*/
 
 /*Start skills*/
+.skills{
+    
+}
+
 .technical-skills{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(100px,100px));
+    grid-template-columns: repeat(auto-fit,minmax(125px,125px));
     grid-gap: 1rem;
     justify-content: center;
     border: 1px solid #7b72bd;
@@ -473,6 +478,10 @@ text-align: center;
 /*End skills*/
 
 /*Start portfolio*/
+.portfolio{
+    
+}
+
 .portfolio-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(350px,350px));
@@ -571,6 +580,10 @@ text-align: center;
 /*End Portfolio*/
 
 /*Start contact*/
+.contact{
+    
+}
+
 .contact .grid-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(450px,450px));
