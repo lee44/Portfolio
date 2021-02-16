@@ -244,28 +244,20 @@ li{
     transform:rotate(-450deg) translateX(-.8rem);
 }
 
-.landing-text{
+.landing-page{
     position: relative;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
-.landing-text .profile-pic{
-    margin: 0 5rem;
+.landing-page .landing-header{
+    text-align: center;
 }
 
-.landing-text img{
-    width: 350px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-.landing-text h1{
+.landing-page h1{
     font-size: 10rem;
     background: linear-gradient(to right, #da22ff, #9733ee);    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -273,16 +265,43 @@ li{
     user-select:none;
 }
 
-.landing-text h6{
+.landing-page h6{
     font-size: 2.5rem;
 }
-/*End header*/
 
-/*Start about*/
-.about p{
-    text-align: center;
+.landing-page .social-media{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
-/*End about*/
+
+.landing-page .social-media div{
+    margin: 0 1rem;
+}
+
+.landing-page .social-media i{
+    font-size: 4rem;
+    transition: color 650ms;
+}
+
+.fa-facebook-square:hover{
+    color: #3b5998;
+}
+
+.fa-twitter-square:hover{
+    color: #1DA1F2;
+}
+
+.fa-linkedin:hover{
+    color: #2867B2;
+}
+
+.fa-github-square:hover{
+    color: #6e5494;
+}
+/*End header*/
 
 /*Start skills*/
 .technical-skills{
@@ -304,7 +323,7 @@ li{
 }
 
 .technical-skills p{
-    text-align: center;
+text-align: center;
 }
 
 .technical-skills i{
@@ -548,17 +567,17 @@ li{
     margin: 0 2rem;
 }
 
-.social-media a{
+.contact .social-media a{
     margin: 0 1rem;
     font-size: 1.8rem;
 }
 
-.social-media i{
+.contact .social-media i{
     font-size: 4rem;
     color: #7b72bd;
 }
 
-.social-media a:hover{
+.contact .social-media a:hover{
     color: #7b72bd;
 }
 /*End contact*/
