@@ -35,6 +35,7 @@ $(document).ready(function () {
     arrow = document.getElementsByClassName('arrow');
     
     skills_coord = $('#skills').offset().top - 200;
+    about_coord = $('#about').offset().top - 200;
     port_coord = $('#portfolio').offset().top - 200;
     contact_coord = $('#contact').offset().top - 200;
     var myScrollFunc = function() {
@@ -50,10 +51,15 @@ $(document).ready(function () {
         }
 
         // Highlights the section in navbar based on scroll position
-        if(y < skills_coord)
+        if(y < about_coord)
         {
             $('nav a[href]').removeClass('active');
             $('nav a[href*="#home"]').toggleClass('active');
+        }
+        else if(y >= about_coord && y < skills_coord)
+        {
+            $('nav a[href]').removeClass('active');
+            $('nav a[href*="#about"]').toggleClass('active');
         }
         else if(y >= skills_coord && y < port_coord)
         {
