@@ -327,7 +327,7 @@ li{
 /*Start About*/
 .about .description{
     background-color: #00001a;
-    padding: 1.5rem;
+    padding: 2rem;
     border: 1px solid #7b72bd;
     border-radius: 5px;
 }
@@ -336,6 +336,20 @@ li{
 .timeline {
     position: relative;
     margin: 10rem auto 0 auto;
+}
+
+.timeline span:nth-child(1){
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.timeline span:nth-child(2){
+    font-size: 1.25rem;
+}
+
+.timeline p{
+    font-size: 1.25rem;
 }
   
 /* The actual timeline (the vertical ruler) */
@@ -605,7 +619,7 @@ text-align: center;
 
 /*Start contact*/
 .contact{
-    
+    height: 75vh;
 }
 
 .contact .grid-container{
