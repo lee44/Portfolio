@@ -3,6 +3,22 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #8A7AFF #16162d;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #16162d;
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #8A7AFF;
+border-radius: 20px;
+border: 3px solid #8A7AFF;
 }
 
 html{
@@ -36,6 +52,10 @@ hr{
     margin: 10px auto;
     width: 90%;
 }
+
+.scrollable-element {
+    scrollbar-color: red yellow;
+  }
 /*End global*/
 
 /*Start reusable*/
@@ -808,42 +828,67 @@ text-align: center;
         font-size: 4rem;
     }
 
-    @media screen and (max-width: 600px){
-        .top-nav{
-            display: none;            
-        }
-
-        .menu-toggler{
-            display: flex;
-        }
-
-        .hidden-nav-link{
-            font-size: 3.5rem;
-        }
-
-        .profile-img{
-            margin: 0 0 7rem 0;
-        }
-
-        .portfolio-item{
-            flex-direction: column;
-        }
-
-        .portfolio-img{
-            margin: 0 0 2rem 0;
-            order: 1;
-        }
-
-        .portfolio-description{
-            margin: 0;
-            order: 2;
-        }     
-
-        .up{
-            right: 1rem;
-            width: 4rem;
-            height: 4rem;   
-        }
+@media screen and (max-width: 600px){
+    .top-nav{
+        display: none;            
     }
+
+    .menu-toggler{
+        display: flex;
+    }
+
+    .hidden-nav-link{
+        font-size: 3.5rem;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+    
+    /* Full-width containers */
+    .timeline .box {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline .box::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    
+    /* Make sure all circles are at the same spot */
+    .timeline .left::after, .timeline .right::after {
+        left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .timeline .right {
+        left: 0%;
+    }
+
+    .portfolio-item{
+        flex-direction: column;
+    }
+
+    .portfolio-img{
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+
+    .portfolio-description{
+        margin: 0;
+        order: 2;
+    }     
+
+    .up{
+        right: 1rem;
+        width: 4rem;
+        height: 4rem;   
+    }
+}
 }
 /*End media queries*/
