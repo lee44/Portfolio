@@ -325,15 +325,18 @@ li{
 /*End header*/
 
 /*Start About*/
-.about{
-    
+.about .description{
+    background-color: #00001a;
+    padding: 1.5rem;
+    border: 1px solid #7b72bd;
+    border-radius: 5px;
 }
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    margin: 5rem auto 0 auto;
-  }
+    margin: 10rem auto 0 auto;
+}
   
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
@@ -387,7 +390,7 @@ top: 22px;
 width: 0;
 z-index: 1;
 right: 30px;
-border: medium solid #7b72bd;
+border: 1px solid #7b72bd;
 border-width: 10px 0 10px 10px;
 border-color: transparent transparent transparent #7b72bd;
 }
@@ -401,7 +404,7 @@ top: 22px;
 width: 0;
 z-index: 1;
 left: 30px;
-border: medium solid #7b72bd;
+border: 1px solid #7b72bd;
 border-width: 10px 10px 10px 0;
 border-color: transparent #7b72bd transparent transparent;
 }
@@ -418,6 +421,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
 padding: 20px 30px;
 background-color: #00001a;
 color: #7b72bd;
+border: 1px solid #7b72bd;
 position: relative;
 border-radius: 6px;
 }
