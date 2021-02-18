@@ -730,10 +730,6 @@ li {
 /*Start contact*/
 .contact {
   height: 75vh;
-  /*End contact*/
-  /*Start Page Scroller*/
-  /*End Page Scroller*/
-  /*Start Arrow Down*/
 }
 
 .contact .grid-container {
@@ -880,7 +876,9 @@ li {
   color: #8A7AFF;
 }
 
-.contact .up {
+/*End contact*/
+/*Start Page Scroller*/
+.up {
   position: fixed;
   width: 5rem;
   height: 5rem;
@@ -895,14 +893,16 @@ li {
   transition: ease-in .25s;
 }
 
-.contact .up i {
+.up i {
   color: #00001a;
   font-size: 2rem;
   margin: auto;
   cursor: pointer;
 }
 
-.contact .arrow {
+/*End Page Scroller*/
+/*Start Arrow Down*/
+.arrow {
   position: absolute;
   left: 0;
   right: 0;
@@ -911,13 +911,13 @@ li {
   margin: 0 auto;
 }
 
-.contact .arrow a {
+.arrow a {
   font-size: 4.5rem;
-  color: #8A7AFF;
+  color: #675CBF;
   text-decoration: none;
 }
 
-.contact .bounce {
+.bounce {
   -webkit-animation: arrow_bounce 2s infinite;
           animation: arrow_bounce 2s infinite;
 }

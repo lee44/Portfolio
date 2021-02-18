@@ -698,8 +698,8 @@ li{
             color: $primaryColor;
         }
     }
-    
-    /*End contact*/
+}
+/*End contact*/
     
     /*Start Page Scroller*/
     .up{
@@ -713,15 +713,14 @@ li{
         display:none;
         animation: pulse 2s infinite;
         transition: ease-in .25s;
-
-        i{
-            color: $backgroundColor;
-            font-size: 2rem;
-            margin: auto;
-            cursor:pointer;
-        }
     }
     
+    .up i{
+        color: $backgroundColor;
+        font-size: 2rem;
+        margin: auto;
+        cursor:pointer;
+    }
     /*End Page Scroller*/
     
     /*Start Arrow Down*/
@@ -732,18 +731,17 @@ li{
         width: 100px;
         bottom: 5%;
         margin: 0 auto;
-
-        a{
-            font-size: 4.5rem;
-            color: $primaryColor; 
-            text-decoration: none; 
-        }
     }
-
+    
+    .arrow a{
+        font-size: 4.5rem;
+        color: #675CBF; 
+        text-decoration: none; 
+    }
+    
     .bounce {
       animation: arrow_bounce 2s infinite;
     }
-}
 
 /*End Arrow Down*/
 
