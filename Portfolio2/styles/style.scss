@@ -237,16 +237,16 @@ li{
     height: 4px;
     border-radius: .8rem;
 
-    .half{
+    &.half{
         width: 50%;
     }
     
-    .start{
+    &.start{
         transform-origin:right;
         transition: transform 650ms cubic-bezier(.54,-.81,.57,.57);
     }
     
-    .end{
+    &.end{
         align-self: flex-end;
         transform-origin:left;
         transition: transform 650ms cubic-bezier(.54,-.81,.57,.57);
@@ -701,47 +701,48 @@ li{
 }
 /*End contact*/
     
-    /*Start Page Scroller*/
-    .up{
-        position: fixed;
-        width: 5rem;
-        height: 5rem;
-        background-color: $secondaryColor;
-        bottom: 2.5rem;
-        right: 2.5rem;
-        border-radius: 100%;
-        display:none;
-        animation: pulse 2s infinite;
-        transition: ease-in .25s;
-    }
-    
-    .up i{
-        color: $backgroundColor;
-        font-size: 2rem;
-        margin: auto;
-        cursor:pointer;
-    }
-    /*End Page Scroller*/
-    
-    /*Start Arrow Down*/
-    .arrow {
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 100px;
-        bottom: 5%;
-        margin: 0 auto;
-    }
-    
-    .arrow a{
-        font-size: 4.5rem;
-        color: #675CBF; 
-        text-decoration: none; 
-    }
-    
-    .bounce {
-      animation: arrow_bounce 2s infinite;
-    }
+/*Start Page Scroller*/
+.up{
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    background-color: $secondaryColor;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    border-radius: 100%;
+    display:none;
+    animation: pulse 2s infinite;
+    transition: ease-in .25s;
+}
+
+.up i{
+    color: $backgroundColor;
+    font-size: 2rem;
+    margin: auto;
+    cursor:pointer;
+}
+/*End Page Scroller*/
+
+/*Start Arrow Down*/
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100px;
+    bottom: 5%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arrow a{
+    font-size: 4.5rem;
+    color: $primaryColor; 
+    text-decoration: none; 
+}
+
+.bounce {
+    animation: arrow_bounce 2s infinite;
+}
 
 /*End Arrow Down*/
 
@@ -816,16 +817,35 @@ li{
     }
 
 @media screen and (max-width: 600px){
+    body{
+        background: url("../images/sitebg2.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    
     .top-nav{
         display: none;            
     }
 
     .menu-toggler{
         display: flex;
+        height: 2.5rem;
+        top: 3rem;
+        right: 2rem;
     }
 
     .hidden-nav-link{
         font-size: 3.5rem;
+    }
+
+    .landing-page{
+        width: 100%;
+        h1{
+            font-size:5rem;
+        }
+    }
+
+    .arrow {
+        bottom: 1.5%;
     }
 
     .timeline::after {
