@@ -125,6 +125,7 @@ header {
   width: 90%;
   max-width: 120rem;
   margin: 0 auto;
+  /* Use ::before to not modify the default state of <a> */
 }
 
 .top-nav .nav-list .logo {
@@ -156,13 +157,6 @@ header {
   margin: 0 0 0 1.5rem;
 }
 
-.top-nav .nav-link {
-  font-family: "The Historia Demo", sans-serif;
-  font-size: 2rem;
-  padding: 1rem;
-}
-
-/* Use ::before to not modify the default state of <a> */
 .top-nav .nav-list a::before {
   content: '';
   height: 3px;
@@ -191,6 +185,12 @@ header {
 .top-nav .nav-list a.active::before {
   width: 95%;
   left: 0;
+}
+
+.top-nav .nav-link {
+  font-family: "The Historia Demo", sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 .hidden-top-nav {
@@ -236,8 +236,7 @@ li {
   padding: 1rem;
 }
 
-.hidden-nav-link:hover,
-.hidden-nav-link:focus {
+.hidden-nav-link:hover, .hidden-nav-link:focus {
   background: -webkit-gradient(linear, left top, right top, from(#da22ff), to(#9733ee));
   background: linear-gradient(to right, #da22ff, #9733ee);
   -webkit-background-clip: text;
@@ -268,9 +267,9 @@ li {
   transition: -webkit-transform 650ms ease-out;
   transition: transform 650ms ease-out;
   transition: transform 650ms ease-out, -webkit-transform 650ms ease-out;
+  /*  Causes all three bars to rotate -45 degrees */
 }
 
-/*  Causes all three bars to rotate -45 degrees */
 .menu-toggler.open {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -284,13 +283,24 @@ li {
   border-radius: .8rem;
 }
 
-.bar.half {
+.bar .half {
   width: 50%;
 }
 
-.bar.start {
+.bar .start {
   -webkit-transform-origin: right;
           transform-origin: right;
+  -webkit-transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.bar .end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   -webkit-transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
@@ -300,17 +310,6 @@ li {
 .open .bar.start {
   -webkit-transform: rotate(-450deg) translateX(0.8rem);
           transform: rotate(-450deg) translateX(0.8rem);
-}
-
-.bar.end {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 
 .open .bar.end {
@@ -384,19 +383,19 @@ li {
   transition: color 650ms;
 }
 
-.fa-facebook-square:hover {
+.landing-page .social-media .fa-facebook-square:hover {
   color: #3b5998;
 }
 
-.fa-twitter-square:hover {
+.landing-page .social-media .fa-twitter-square:hover {
   color: #1DA1F2;
 }
 
-.fa-linkedin:hover {
+.landing-page .social-media .fa-linkedin:hover {
   color: #2867B2;
 }
 
-.fa-github-square:hover {
+.landing-page .social-media .fa-github-square:hover {
   color: #6e5494;
 }
 
@@ -413,6 +412,17 @@ li {
 .timeline {
   position: relative;
   margin: 10rem auto 0 auto;
+  /* The actual timeline (the vertical ruler) */
+  /* Container around content */
+  /* The circles on the timeline */
+  /* Place the container to the left */
+  /* Place the container to the right */
+  /* Add arrows to the left container (pointing right) */
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */
+  /* The actual content */
+  /*With padding, total width didn't increase but height did because the parent div specified 50% width 
+    and globally border-box is defined. Height isn't set so border-box can't be applied*/
 }
 
 .timeline span:nth-child(1) {
@@ -429,7 +439,6 @@ li {
   font-size: 1.25rem;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -441,14 +450,12 @@ li {
   margin-left: -3px;
 }
 
-/* Container around content */
 .timeline .box {
   padding: 10px 40px;
   position: relative;
   width: 50%;
 }
 
-/* The circles on the timeline */
 .timeline .box::after {
   content: '';
   position: absolute;
@@ -462,17 +469,14 @@ li {
   z-index: 1;
 }
 
-/* Place the container to the left */
 .timeline .left {
   left: 0;
 }
 
-/* Place the container to the right */
 .timeline .right {
   left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .timeline .left::before {
   content: " ";
   height: 0;
@@ -486,7 +490,6 @@ li {
   border-color: transparent transparent transparent #8A7AFF;
 }
 
-/* Add arrows to the right container (pointing left) */
 .timeline .right::before {
   content: " ";
   height: 0;
@@ -500,14 +503,10 @@ li {
   border-color: transparent #8A7AFF transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .timeline .right::after {
   left: -16px;
 }
 
-/* The actual content */
-/*With padding, total width didn't increase but height did because the parent div specified 50% width 
-and globally border-box is defined. Height isn't set so border-box can't be applied*/
 .timeline .content {
   padding: 20px 30px;
   background-color: #00001a;
@@ -558,7 +557,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   font-size: 5rem;
 }
 
-.jquery-icon {
+.technical-skills .jquery-icon {
   background: url("../images/jquery.png");
   height: 50px;
   width: 50px;
@@ -566,7 +565,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   border-radius: 10px;
 }
 
-.django-icon {
+.technical-skills .django-icon {
   background: url("../images/django.png");
   height: 50px;
   width: 50px;
@@ -574,7 +573,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   border-radius: 10px;
 }
 
-.photoshop-icon {
+.technical-skills .photoshop-icon {
   background: url("../images/photoshop.png");
   height: 50px;
   width: 50px;
@@ -582,7 +581,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   border-radius: 10px;
 }
 
-.mysql-icon {
+.technical-skills .mysql-icon {
   background: url("../images/mysql.jpg");
   height: 50px;
   width: 50px;
@@ -590,7 +589,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   border-radius: 10px;
 }
 
-.crystalreports-icon {
+.technical-skills .crystalreports-icon {
   background: url("../images/crystalreport.jpg");
   height: 50px;
   width: 50px;
@@ -648,7 +647,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   margin: 0px 10px 5px 10px;
 }
 
-.language {
+.portfolio-item .language {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -666,7 +665,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   margin: 0px 5px;
 }
 
-.language span {
+.portfolio-item .language span {
   font-size: 1.5rem;
   background-color: #675CBF;
   padding: 5px;
@@ -674,39 +673,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   margin: 2.5px 2.5px;
 }
 
-.github-btn {
-  background-color: #530053;
-  border: 0;
-  border-radius: 5px;
-  color: white;
-  padding: 12px 0px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 95%;
-  margin-right: 5px;
-}
-
-.github-btn:hover {
-  background-color: #532253;
-}
-
-.live-btn {
-  background-color: red;
-  border: 0;
-  border-radius: 5px;
-  color: white;
-  padding: 12px 0px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 95%;
-  margin-left: 5px;
-}
-
-.live-btn:hover {
-  background-color: #ff4444;
-}
-
-.source-container {
+.portfolio-item .source-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -723,14 +690,50 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   margin: 5px 10px;
 }
 
-.source-container a {
+.portfolio-item .source-container a {
   width: 100%;
+}
+
+.portfolio-item .source-container .github-btn {
+  background-color: #530053;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 95%;
+  margin-right: 5px;
+}
+
+.portfolio-item .source-container .github-btn:hover {
+  background-color: #532253;
+}
+
+.portfolio-item .source-container .live-btn {
+  background-color: red;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  padding: 12px 0px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 95%;
+  margin-left: 5px;
+}
+
+.portfolio-item .source-container .live-btn:hover {
+  background-color: #ff4444;
 }
 
 /*End Portfolio*/
 /*Start contact*/
 .contact {
   height: 75vh;
+  /*End contact*/
+  /*Start Page Scroller*/
+  /*End Page Scroller*/
+  /*Start Arrow Down*/
 }
 
 .contact .grid-container {
@@ -826,6 +829,23 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   text-align: center;
 }
 
+.contact .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem;
+}
+
 .contact .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -846,23 +866,6 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   height: 90%;
 }
 
-.contact .icon-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 2rem;
-}
-
 .contact .social-media a {
   margin: 0 1rem;
   font-size: 1.8rem;
@@ -877,9 +880,7 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   color: #8A7AFF;
 }
 
-/*End contact*/
-/*Start Page Scroller*/
-.up {
+.contact .up {
   position: fixed;
   width: 5rem;
   height: 5rem;
@@ -894,16 +895,14 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   transition: ease-in .25s;
 }
 
-.up i {
+.contact .up i {
   color: #00001a;
   font-size: 2rem;
   margin: auto;
   cursor: pointer;
 }
 
-/*End Page Scroller*/
-/*Start Arrow Down*/
-.arrow {
+.contact .arrow {
   position: absolute;
   left: 0;
   right: 0;
@@ -912,13 +911,13 @@ and globally border-box is defined. Height isn't set so border-box can't be appl
   margin: 0 auto;
 }
 
-.arrow a {
+.contact .arrow a {
   font-size: 4.5rem;
   color: #8A7AFF;
   text-decoration: none;
 }
 
-.bounce {
+.contact .bounce {
   -webkit-animation: arrow_bounce 2s infinite;
           animation: arrow_bounce 2s infinite;
 }
