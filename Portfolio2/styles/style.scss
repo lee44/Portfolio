@@ -775,7 +775,7 @@ li{
 /*Start media queries*/
 @media screen and (max-width: 800px){
     body{
-        background: url("../images/sitebg2.jpg") no-repeat center fixed;
+        background: url("../images/sitebg.jpg") no-repeat center fixed;
         background-size: cover;
     }
 
@@ -807,19 +807,14 @@ li{
         grid-template-columns: repeat(auto-fit,minmax(100px,100px));
     }
 
-    .icon-container{
-        width: 7rem;
-        height: 7rem;;
-    }
-
-    .icon-container i{
-        font-size: 4rem;
-    }
-
 @media screen and (max-width: 600px){
     body{
-        background: url("../images/sitebg2.jpg") no-repeat center fixed;
+        background: url("../images/sitebg2.jpg") no-repeat center scroll;
         background-size: cover;
+    }
+
+    section{
+        margin: 5rem 0;
     }
     
     .top-nav{
@@ -890,6 +885,12 @@ li{
         margin: 0;
         order: 2;
     }     
+
+    .contact{    
+        .grid-container{
+            grid-template-columns: repeat(auto-fit,minmax(350px,350px));
+        }
+    }
 
     .up{
         right: 1rem;
