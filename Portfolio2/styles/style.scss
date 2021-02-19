@@ -83,7 +83,7 @@ hr{
             bottom: -.5rem;
             left:50%;
             transform: translateX(-50%);
-            background-color: $h1_barColor;
+            background-color: $primaryColor;
             width: 10rem;
             height: 3px;
             border-radius: .8rem;
@@ -213,16 +213,33 @@ li{
     border-radius: initial;
 }
 
+.menu-toggler-container{
+    display: none;
+    width: 100%;
+    height: 5.5rem;
+    background-color: $backgroundColor;
+    position: fixed;
+    z-index: 998;
+    .logo{
+        display: inline-block;
+        margin: .5rem auto 0 1rem;
+        font-size: 4rem;
+        background: linear-gradient(to right, #da22ff, #9733ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
 .menu-toggler{
     position: absolute;
-    top: 2rem;
+    height: 2.5rem;
+    top: 1.7rem;
     right: 2rem;
-    height: 4rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     cursor:pointer;
-    z-index:1500;
     transition:transform 650ms ease-out;
 
     /*  Causes all three bars to rotate -45 degrees */
@@ -775,12 +792,20 @@ li{
 /*Start media queries*/
 @media screen and (max-width: 800px){
     body{
-        background: url("../images/sitebg.jpg") no-repeat center fixed;
+        background: url("../images/sitebg2.jpg") no-repeat center fixed;
         background-size: cover;
+    }
+
+    li{
+        margin: 2rem 0;
     }
 
     .top-nav{
         display: none;
+    }
+
+    .menu-toggler-container{
+        display: flex;
     }
 
     .menu-toggler{
@@ -791,20 +816,22 @@ li{
         flex-direction: column;
     }
 
-    li{
-        margin: 2rem 0;
-    }
-
     .hidden-nav-link{
         font-size:4.5rem;
     }
 
     .section-heading h1{
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .technical-skills{
         grid-template-columns: repeat(auto-fit,minmax(100px,100px));
+    }
+
+    .up{
+        right: 1rem;
+        width: 4rem;
+        height: 4rem;   
     }
 
 @media screen and (max-width: 600px){
@@ -814,28 +841,29 @@ li{
     }
 
     section{
-        margin: 5rem 0;
+        margin: $section_600 0;
     }
     
     .top-nav{
         display: none;            
     }
 
+    .menu-toggler-container{
+        display: flex;
+    }
+
     .menu-toggler{
         display: flex;
-        height: 2.5rem;
-        top: 3rem;
-        right: 2rem;
     }
 
     .hidden-nav-link{
-        font-size: 3.5rem;
+        font-size: $nav_font_600;
     }
 
     .landing-page{
         width: 100%;
         h1{
-            font-size:5rem;
+            font-size: $landingPageh1_600;
         }
     }
 
@@ -851,15 +879,15 @@ li{
     .timeline .box {
         width: 100%;
         padding-left: 70px;
-        padding-right: 25px;
+        padding-right: 5px;
     }
     
     /* Make sure that all arrows are pointing leftwards */
     .timeline .box::before {
         left: 60px;
-        border: medium solid white;
+        border: medium solid $primaryColor;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent $primaryColor transparent transparent;
     }
     
     /* Make sure all circles are at the same spot */
@@ -893,7 +921,7 @@ li{
     }
 
     .up{
-        right: 1rem;
+        right: .9rem;
         width: 4rem;
         height: 4rem;   
     }

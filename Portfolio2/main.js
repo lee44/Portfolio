@@ -34,10 +34,11 @@ $(document).ready(function () {
     up = document.getElementById("up");
     arrow = document.getElementsByClassName('arrow');
     
-    skills_coord = $('#skills').offset().top - 200;
     about_coord = $('#about').offset().top - 200;
+    skills_coord = $('#skills').offset().top - 200;
     port_coord = $('#portfolio').offset().top - 200;
     contact_coord = $('#contact').offset().top - 200;
+    
     var myScrollFunc = function() {
         var y = window.scrollY;
 
