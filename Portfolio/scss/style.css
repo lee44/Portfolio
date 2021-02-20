@@ -5,7 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: #8A7AFF #00001a;
+  scrollbar-color: #8067ff #00001a;
 }
 
 *::-webkit-scrollbar {
@@ -17,9 +17,9 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #8A7AFF;
+  background-color: #8067ff;
   border-radius: 20px;
-  border: 3px solid #8A7AFF;
+  border: 3px solid #8067ff;
 }
 
 html {
@@ -70,7 +70,7 @@ hr {
 
 .section-heading h1 {
   font-size: 3.5rem;
-  color: #8A7AFF;
+  color: #8067ff;
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
@@ -84,7 +84,7 @@ hr {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: #8A7AFF;
+  background-color: #8067ff;
   width: 10rem;
   height: 3px;
   border-radius: .8rem;
@@ -160,7 +160,7 @@ header {
 .top-nav .nav-list a::before {
   content: '';
   height: 3px;
-  background-color: #8A7AFF;
+  background-color: #8067ff;
   width: 0px;
   position: absolute;
   right: 0;
@@ -170,7 +170,7 @@ header {
 }
 
 .top-nav .nav-list a:hover {
-  color: #8A7AFF;
+  color: #8067ff;
 }
 
 .top-nav .nav-list a:hover::before {
@@ -179,7 +179,7 @@ header {
 }
 
 .top-nav .nav-list a.active {
-  color: #8A7AFF;
+  color: #8067ff;
 }
 
 .top-nav .nav-list a.active::before {
@@ -423,7 +423,7 @@ li {
 .about .description {
   background-color: #00001a;
   padding: 2rem;
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-radius: 5px;
 }
 
@@ -462,7 +462,7 @@ li {
   content: '';
   position: absolute;
   width: 6px;
-  background-color: #8A7AFF;
+  background-color: #8067ff;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -482,7 +482,7 @@ li {
   height: 25px;
   right: -17px;
   background-color: #00001a;
-  border: 4px solid #8A7AFF;
+  border: 4px solid #8067ff;
   top: 15px;
   border-radius: 50%;
   z-index: 1;
@@ -504,9 +504,9 @@ li {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #8A7AFF;
+  border-color: transparent transparent transparent #8067ff;
 }
 
 .timeline .right::before {
@@ -517,9 +517,9 @@ li {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #8A7AFF transparent transparent;
+  border-color: transparent #8067ff transparent transparent;
 }
 
 .timeline .right::after {
@@ -529,8 +529,8 @@ li {
 .timeline .content {
   padding: 20px 30px;
   background-color: #00001a;
-  color: #8A7AFF;
-  border: 1px solid #8A7AFF;
+  color: #8067ff;
+  border: 1px solid #8067ff;
   position: relative;
   border-radius: 6px;
 }
@@ -546,7 +546,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-radius: 5px;
   background-color: #00001a;
 }
@@ -643,7 +643,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #00001a;
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-radius: 5px;
   padding-bottom: 1rem;
   -webkit-transition: all 200ms;
@@ -764,7 +764,7 @@ li {
 
 .contact form {
   height: 375px;
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-radius: 5px;
   background-color: #00001a;
 }
@@ -792,7 +792,7 @@ li {
   height: 3.5rem;
   padding: 0 .5rem;
   border: none;
-  outline-color: #8A7AFF;
+  outline-color: #8067ff;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   color: #00001a;
@@ -803,7 +803,7 @@ li {
   height: 12rem;
   padding: 0 .5rem;
   border: none;
-  outline-color: #8A7AFF;
+  outline-color: #8067ff;
   color: #00001a;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
@@ -812,7 +812,7 @@ li {
 
 .contact input[type="submit"] {
   width: 50%;
-  background-color: #8A7AFF;
+  background-color: #8067ff;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -822,11 +822,11 @@ li {
 
 .contact input[type="submit"]:hover {
   color: white;
-  background-color: #8A7AFF;
+  background-color: #8067ff;
 }
 
 .contact .social-container {
-  border: 1px solid #8A7AFF;
+  border: 1px solid #8067ff;
   border-radius: 5px;
   height: 375px;
   background-color: #00001a;
@@ -835,7 +835,7 @@ li {
 .contact .social-header {
   width: 100%;
   height: 10%;
-  color: #8A7AFF;
+  color: #8067ff;
   margin-top: 1rem;
 }
 
@@ -888,11 +888,11 @@ li {
 
 .contact .social-media i {
   font-size: 4rem;
-  color: #8A7AFF;
+  color: #8067ff;
 }
 
 .contact .social-media a:hover {
-  color: #8A7AFF;
+  color: #8067ff;
 }
 
 /*End contact*/
@@ -933,7 +933,7 @@ li {
 
 .arrow a {
   font-size: 4.5rem;
-  color: #8A7AFF;
+  color: #8067ff;
   text-decoration: none;
 }
 
@@ -1094,9 +1094,9 @@ li {
   /* Make sure that all arrows are pointing leftwards */
   .timeline .box::before {
     left: 60px;
-    border: medium solid #8A7AFF;
+    border: medium solid #8067ff;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #8A7AFF transparent transparent;
+    border-color: transparent #8067ff transparent transparent;
   }
   /* Make sure all circles are at the same spot */
   .timeline .left::after, .timeline .right::after {
