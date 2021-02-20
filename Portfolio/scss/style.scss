@@ -345,21 +345,7 @@ li{
 .timeline {
     position: relative;
     margin: 10rem auto 0 auto;
-    
-    span:nth-child(1){
-        font-size: 2rem;
-        font-weight: bold;
-        margin-right: 1rem;
-    }
-    
-    span:nth-child(2){
-        font-size: 1.25rem;
-    }
-    
-    p{
-        font-size: 1.25rem;
-    }
-      
+          
     /* The actual timeline (the vertical ruler) */
     &::after {
     content: '';
@@ -395,12 +381,46 @@ li{
     
     /* Place the container to the left */
     .left {
-    left: 0;
+        left: 0;
+        div:nth-child(1){
+            color: $primaryColor;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: end;
+        }
+        div:nth-child(2){
+            color: $secondaryColor;
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+        p{
+            color: $secondaryColor;
+            font-weight: normal;
+            font-size: 1.5rem;
+        }
     }
     
     /* Place the container to the right */
     .right {
-    left: 50%;
+        left: 50%;
+        div:nth-child(1){
+            color: $primaryColor;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: start;
+        }
+        div:nth-child(2){
+            color: $secondaryColor;
+            font-weight: bold;
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+        p{
+            color: $secondaryColor;
+            font-weight: normal;
+            font-size: 1.5rem;
+        }
     }
     
     /* Add arrows to the left container (pointing right) */
@@ -442,7 +462,6 @@ li{
     .content {
     padding: 20px 30px;
     background-color: $backgroundColor;
-    color: $primaryColor;
     border: $border_width solid $primaryColor;
     position: relative;
     border-radius: 6px;
@@ -751,10 +770,11 @@ li{
     text-align: center;
 }
 
-.arrow a{
+.arrow i{
     font-size: 4.5rem;
     color: $primaryColor; 
-    text-decoration: none; 
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .bounce {
@@ -871,34 +891,36 @@ li{
         bottom: 1.5%;
     }
 
-    .timeline::after {
-        left: 31px;
-    }
     
     /* Full-width containers */
-    .timeline .box {
+    .timeline {
+        &::after {
+            left: 31px;
+        }
+        .box {
         width: 100%;
         padding-left: 70px;
         padding-right: 5px;
+        }
+        /* Make sure that all arrows are pointing leftwards */
+        .box::before {
+            left: 60px;
+            border: medium solid $primaryColor;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent $primaryColor transparent transparent;
+        }
+        
+        /* Make sure all circles are at the same spot */
+        .left::after,.right::after {
+            left: 15px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .right {
+            left: 0%;
+        }
     }
     
-    /* Make sure that all arrows are pointing leftwards */
-    .timeline .box::before {
-        left: 60px;
-        border: medium solid $primaryColor;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent $primaryColor transparent transparent;
-    }
-    
-    /* Make sure all circles are at the same spot */
-    .timeline .left::after, .timeline .right::after {
-        left: 15px;
-    }
-    
-    /* Make all right containers behave like the left ones */
-    .timeline .right {
-        left: 0%;
-    }
 
     .portfolio-item{
         flex-direction: column;

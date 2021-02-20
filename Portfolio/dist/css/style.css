@@ -366,20 +366,6 @@ li {
     and globally border-box is defined. Height isn't set so border-box can't be applied*/
 }
 
-.timeline span:nth-child(1) {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-right: 1rem;
-}
-
-.timeline span:nth-child(2) {
-  font-size: 1.25rem;
-}
-
-.timeline p {
-  font-size: 1.25rem;
-}
-
 .timeline::after {
   content: '';
   position: absolute;
@@ -414,8 +400,48 @@ li {
   left: 0;
 }
 
+.timeline .left div:nth-child(1) {
+  color: #8067ff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: end;
+}
+
+.timeline .left div:nth-child(2) {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.timeline .left p {
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
 .timeline .right {
   left: 50%;
+}
+
+.timeline .right div:nth-child(1) {
+  color: #8067ff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.timeline .right div:nth-child(2) {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.timeline .right p {
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 .timeline .left::before {
@@ -451,7 +477,6 @@ li {
 .timeline .content {
   padding: 20px 30px;
   background-color: #00001a;
-  color: #8067ff;
   border: 1px solid #8067ff;
   position: relative;
   border-radius: 6px;
@@ -773,10 +798,11 @@ li {
   text-align: center;
 }
 
-.arrow a {
+.arrow i {
   font-size: 4.5rem;
   color: #8067ff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .bounce {
@@ -876,27 +902,29 @@ li {
   .arrow {
     bottom: 1.5%;
   }
+  /* Full-width containers */
+  .timeline {
+    /* Make sure that all arrows are pointing leftwards */
+    /* Make sure all circles are at the same spot */
+    /* Make all right containers behave like the left ones */
+  }
   .timeline::after {
     left: 31px;
   }
-  /* Full-width containers */
   .timeline .box {
     width: 100%;
     padding-left: 70px;
     padding-right: 5px;
   }
-  /* Make sure that all arrows are pointing leftwards */
   .timeline .box::before {
     left: 60px;
     border: medium solid #8067ff;
     border-width: 10px 10px 10px 0;
     border-color: transparent #8067ff transparent transparent;
   }
-  /* Make sure all circles are at the same spot */
   .timeline .left::after, .timeline .right::after {
     left: 15px;
   }
-  /* Make all right containers behave like the left ones */
   .timeline .right {
     left: 0%;
   }

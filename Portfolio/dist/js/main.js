@@ -25,6 +25,12 @@ $(document).ready(function () {
         },500);  
     })
 
+    $('.arrow').on('click',function(){
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top - 50
+        },500);  
+    })
+
     $('#up').on('click',function(){
         $('html, body').animate({
             scrollTop: 0
