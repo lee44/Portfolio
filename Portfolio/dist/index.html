@@ -286,15 +286,15 @@
                 <h1>Contact</h1>
             </div>
             <div class="grid-container">
-                <form action="">
+                <form name="contact" method="POST" data-netlify="true">
                     <div class="social-header">
                         <h2>Send Me A Message</h2>
                         <hr>
                     </div>
                     <div class="form-elements">
-                        <input type="text" id="name" placeholder="Name" required>
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-                        <textarea name="subject" id="subject" placeholder="Message" cols="5" rows="5"></textarea>
+                        <input type="text" name="name" placeholder="Name"  required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" cols="5" rows="5"></textarea>
                         <input type="submit" value="Submit">
                     </div>
                 </form>
