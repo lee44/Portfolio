@@ -40,6 +40,7 @@ body{
 section{
     padding: 4rem 2.5rem;
     margin: $sectionMargin 0;
+    min-width: 320px;
 }
 
 a{
@@ -216,6 +217,7 @@ li{
 .menu-toggler-container{
     display: none;
     width: 100%;
+    min-width: 320px;
     height: 5.5rem;
     background-color: $backgroundColor;
     position: fixed;
@@ -282,6 +284,7 @@ li{
 .landing-page{
     position: relative;
     height: 100%;
+    min-width: 320px;
     @include flex(column,center);
     
     .landing-header{
@@ -661,7 +664,7 @@ li{
     label{
         width: 100%;
         float: left;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
     }
     
@@ -817,7 +820,7 @@ li{
     60% {
       transform: translateY(-15px);
     }
-  }
+}
 /*End animations*/
 
 /*Start media queries*/
@@ -864,7 +867,7 @@ li{
         width: 4rem;
         height: 4rem;   
     }
-
+}
 @media screen and (max-width: 600px){
     body{
         background: url("../images/sitebg2.jpg") no-repeat center scroll;
@@ -902,7 +905,6 @@ li{
         bottom: 1.5%;
     }
 
-    
     /* Full-width containers */
     .timeline {
         &::after {
@@ -932,7 +934,6 @@ li{
         }
     }
     
-
     .portfolio-item{
         flex-direction: column;
     }
@@ -948,6 +949,7 @@ li{
     }     
 
     .contact{    
+        height: 135vh;
         .grid-container{
             grid-template-columns: repeat(auto-fit,minmax(350px,350px));
         }
@@ -959,5 +961,27 @@ li{
         height: 4rem;   
     }
 }
+
+@media screen and (max-width: 360px){
+    .contact{    
+        height: 115vh;
+        .grid-container{
+            grid-template-columns: 1fr;
+        }
+        a{
+            font-size: 1.7rem !important;
+        }
+        i{
+            font-size: 3rem !important;
+        }
+        h2{
+            font-size: 2.25rem;
+        }
+    }
+
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+    
 }
 /*End media queries*/

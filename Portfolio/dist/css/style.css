@@ -37,6 +37,7 @@ body {
 section {
   padding: 4rem 2.5rem;
   margin: 15rem 0;
+  min-width: 320px;
 }
 
 a {
@@ -218,6 +219,7 @@ li {
 .menu-toggler-container {
   display: none;
   width: 100%;
+  min-width: 320px;
   height: 5.5rem;
   background-color: #00001a;
   position: fixed;
@@ -284,6 +286,7 @@ li {
 .landing-page {
   position: relative;
   height: 100%;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -684,7 +687,7 @@ li {
 .contact label {
   width: 100%;
   float: left;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -884,7 +887,7 @@ li {
   }
 }
 
-@media screen and (max-width: 800px) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   body {
     background: url("../images/sitebg2.jpg") no-repeat center scroll;
     background-size: cover;
@@ -950,6 +953,9 @@ li {
     margin: 0;
     order: 2;
   }
+  .contact {
+    height: 135vh;
+  }
   .contact .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
   }
@@ -957,6 +963,27 @@ li {
     right: .9rem;
     width: 4rem;
     height: 4rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contact {
+    height: 115vh;
+  }
+  .contact .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .contact a {
+    font-size: 1.7rem !important;
+  }
+  .contact i {
+    font-size: 3rem !important;
+  }
+  .contact h2 {
+    font-size: 2.25rem;
+  }
+  .portfolio-container {
+    grid-template-columns: 1fr;
   }
 }
 
