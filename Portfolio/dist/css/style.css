@@ -101,7 +101,7 @@ header {
   top: 0;
   width: 100%;
   height: 5.5rem;
-  padding: 0 2.5rem;
+  padding: 0 1.6rem;
   background-color: #00001a;
   z-index: 99;
 }
@@ -381,7 +381,7 @@ li {
 }
 
 .timeline .box {
-  padding: 10px 60px;
+  padding: 10px 40px;
   position: relative;
   width: 50%;
 }
@@ -653,7 +653,7 @@ li {
 /*End Portfolio*/
 /*Start contact*/
 .contact {
-  height: 75vh;
+  height: 95vh;
 }
 
 .contact .grid-container {
@@ -730,6 +730,7 @@ li {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.8rem;
+  margin: 1rem 0;
 }
 
 .contact input[type="submit"]:hover {
