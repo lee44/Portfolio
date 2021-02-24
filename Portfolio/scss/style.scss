@@ -289,6 +289,7 @@ li{
     
     .landing-header{
         text-align: center;
+        width: 50%;
     }
     
     h1{
@@ -296,16 +297,25 @@ li{
         background: $linear_gradient;    
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: 'Rockwell',sans-serif;
         padding: 1rem;
         user-select:none;
     }
     
     h6{
-        font-size: 2.5rem;
+        font-size: 8rem;
+        font-family: 'Rockwell',sans-serif;
+        line-height: 7rem;
+    }
+
+    .separator{
+        margin: 2.5rem auto;
+        height: 1rem;
+        background: $linear_gradient;
+        border: none;
     }
     
     .social-media{
-        margin: 2rem 0;
         @include flex(row,space-evenly);
 
         div{
