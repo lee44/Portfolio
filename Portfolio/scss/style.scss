@@ -309,7 +309,7 @@ li{
     }
 
     .separator{
-        margin: 2.5rem auto;
+        margin: 3rem auto;
         height: 1rem;
         background: $linear_gradient;
         border: none;
@@ -571,7 +571,8 @@ li{
     
     img{
         width: 100%;
-        height: 250;
+        min-height: 225px;
+        max-height: 225px;
         border-radius: $border_radius 5px 0 0;
         margin-bottom: 5px;
     }

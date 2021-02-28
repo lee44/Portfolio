@@ -315,7 +315,7 @@ li {
 }
 
 .landing-page .separator {
-  margin: 2.5rem auto;
+  margin: 3rem auto;
   height: 1rem;
   background: linear-gradient(to right, #da22ff, #9733ee);
   border: none;
@@ -590,7 +590,8 @@ li {
 
 .portfolio-item img {
   width: 100%;
-  height: 250;
+  min-height: 225px;
+  max-height: 225px;
   border-radius: 5px 5px 0 0;
   margin-bottom: 5px;
 }
