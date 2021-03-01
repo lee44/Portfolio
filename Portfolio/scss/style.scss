@@ -562,7 +562,7 @@ li{
 .portfolio-item{
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     background-color: $backgroundColor;
     border: $border_width solid $primaryColor;
@@ -584,6 +584,13 @@ li{
     
     h2{
         margin: 0px 10px 5px 10px;
+        font-size: 1.8rem;
+    }
+
+    h3{
+        min-height: 40px;
+        margin: 0px 10px 0 10px;
+        font-size: 1.5rem;
     }
     
     .language{

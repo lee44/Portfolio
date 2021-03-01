@@ -583,7 +583,7 @@ li {
 .portfolio-item {
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #00001a;
   border: 1px solid #8067ff;
@@ -606,6 +606,13 @@ li {
 
 .portfolio-item h2 {
   margin: 0px 10px 5px 10px;
+  font-size: 1.8rem;
+}
+
+.portfolio-item h3 {
+  min-height: 40px;
+  margin: 0px 10px 0 10px;
+  font-size: 1.5rem;
 }
 
 .portfolio-item .language {
