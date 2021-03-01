@@ -34,10 +34,14 @@ body {
   background-size: cover;
 }
 
+header {
+  min-width: 360px;
+}
+
 section {
   padding: 4rem 2.5rem;
   margin: 15rem 0;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 a {
@@ -311,7 +315,7 @@ li {
 .landing-page h6 {
   font-size: 8rem;
   font-family: 'Rockwell',sans-serif;
-  line-height: 7rem;
+  line-height: 7.5rem;
 }
 
 .landing-page .separator {
@@ -357,7 +361,7 @@ li {
 /*Start About*/
 .about .description {
   background-color: #00001a;
-  padding: 3rem;
+  padding: 2rem;
   border: 1px solid #8067ff;
   border-radius: 5px;
 }
@@ -495,7 +499,7 @@ li {
 }
 
 .timeline .content {
-  padding: 20px 30px;
+  padding: 10px 20px;
   background-color: #00001a;
   border: 1px solid #8067ff;
   position: relative;
@@ -906,6 +910,15 @@ li {
   .section-heading h1 {
     font-size: 4rem;
   }
+  .landing-page {
+    width: 100%;
+  }
+  .landing-page h1 {
+    font-size: 8rem;
+  }
+  .landing-page h6 {
+    font-size: 6rem;
+  }
   .technical-skills {
     grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
   }
@@ -942,6 +955,13 @@ li {
   .landing-page h1 {
     font-size: 6rem;
   }
+  .landing-page h6 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+  .landing-page .separator {
+    margin: 1.5rem auto;
+  }
   .arrow {
     bottom: 1.5%;
   }
@@ -956,8 +976,8 @@ li {
   }
   .timeline .box {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 5px;
+    padding-left: 70px !important;
+    padding-right: 5px !important;
   }
   .timeline .box::before {
     left: 60px;
@@ -970,6 +990,12 @@ li {
   }
   .timeline .right {
     left: 0%;
+  }
+  .timeline .content {
+    text-align: start !important;
+  }
+  .timeline .content div {
+    text-align: start !important;
   }
   .portfolio-item {
     flex-direction: column;
@@ -996,8 +1022,22 @@ li {
 }
 
 @media screen and (max-width: 360px) {
+  .landing-page h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .landing-page h6 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  .arrow i {
+    font-size: 3.5rem;
+  }
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
   .contact {
-    height: 115vh;
+    height: 140vh;
   }
   .contact .grid-container {
     grid-template-columns: 1fr;
@@ -1010,9 +1050,6 @@ li {
   }
   .contact h2 {
     font-size: 2.25rem;
-  }
-  .portfolio-container {
-    grid-template-columns: 1fr;
   }
 }
 

@@ -37,10 +37,13 @@ body{
     background-size: cover;    
 }
 
+header{
+    min-width: 360px;
+}
 section{
     padding: 4rem 2.5rem;
     margin: $sectionMargin 0;
-    min-width: 320px;
+    min-width: 360px;
 }
 
 a{
@@ -305,7 +308,7 @@ li{
     h6{
         font-size: 8rem;
         font-family: 'Rockwell',sans-serif;
-        line-height: 7rem;
+        line-height: 7.5rem;
     }
 
     .separator{
@@ -349,7 +352,7 @@ li{
 /*Start About*/
 .about .description{
     background-color: $backgroundColor;
-    padding: 3rem;
+    padding: 2rem;
     border: $border_width solid $primaryColor;
     border-radius: $border_radius;
 }
@@ -478,7 +481,7 @@ li{
     /*With padding, total width didn't increase but height did because the parent div specified 50% width 
     and globally border-box is defined. Height isn't set so border-box can't be applied*/
     .content {
-    padding: 20px 30px;
+    padding: 10px 20px;
     background-color: $backgroundColor;
     border: $border_width solid $primaryColor;
     position: relative;
@@ -860,28 +863,39 @@ li{
         margin: 2rem 0;
     }
 
+    
     .top-nav{
         display: none;
     }
-
+    
     .menu-toggler-container{
         display: flex;
     }
-
+    
     .menu-toggler{
         display: flex;
     }
-
+    
     .hidden-nav-list{
         flex-direction: column;
     }
-
+    
     .hidden-nav-link{
         font-size:4.5rem;
     }
-
+    
     .section-heading h1{
         font-size: 4rem;
+    }
+    
+    .landing-page{
+        width: 100%;
+        h1{
+            font-size: 8rem;
+        }
+        h6{
+            font-size: 6rem;
+        }
     }
 
     .technical-skills{
@@ -923,7 +937,14 @@ li{
     .landing-page{
         width: 100%;
         h1{
-            font-size: $landingPageh1_600;
+            font-size: 6rem;
+        }
+        h6{
+            font-size: 4rem;
+            line-height: 4.5rem;
+        }
+        .separator{
+            margin: 1.5rem auto;
         }
     }
 
@@ -938,8 +959,8 @@ li{
         }
         .box {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 5px;
+        padding-left: 70px !important;
+        padding-right: 5px !important; 
         }
         /* Make sure that all arrows are pointing leftwards */
         .box::before {
@@ -957,6 +978,12 @@ li{
         /* Make all right containers behave like the left ones */
         .right {
             left: 0%;
+        }
+        .content{
+            text-align: start !important;
+            div{
+                text-align: start !important;
+            }
         }
     }
     
@@ -989,8 +1016,27 @@ li{
 }
 
 @media screen and (max-width: 360px){
+    .landing-page{
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+        h6{
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    }
+
+    .arrow i{
+        font-size: 3.5rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+
     .contact{    
-        height: 115vh;
+        height: 140vh;
         .grid-container{
             grid-template-columns: 1fr;
         }
@@ -1003,11 +1049,6 @@ li{
         h2{
             font-size: 2.25rem;
         }
-    }
-
-    .portfolio-container{
-        grid-template-columns: 1fr;
-    }
-    
+    }    
 }
 /*End media queries*/
