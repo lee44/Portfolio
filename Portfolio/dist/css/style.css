@@ -357,7 +357,7 @@ li {
 /*Start About*/
 .about .description {
   background-color: #00001a;
-  padding: 2rem;
+  padding: 3rem;
   border: 1px solid #8067ff;
   border-radius: 5px;
 }
@@ -391,9 +391,16 @@ li {
 }
 
 .timeline .box {
-  padding: 10px 40px;
   position: relative;
   width: 50%;
+}
+
+.timeline .box.left {
+  padding: 10px 40px 10px 0px;
+}
+
+.timeline .box.right {
+  padding: 10px 0 10px 40px;
 }
 
 .timeline .box::after {
@@ -505,6 +512,7 @@ li {
   border: 1px solid #8067ff;
   border-radius: 5px;
   background-color: #00001a;
+  padding: 3rem 0;
 }
 
 .technical-skills .items {
@@ -512,7 +520,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem 2rem;
+  padding: 2rem 0;
 }
 
 .technical-skills p {
@@ -636,6 +644,7 @@ li {
   color: white;
   padding: 12px 0px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   width: 95%;
   margin-right: 5px;
@@ -652,6 +661,7 @@ li {
   color: white;
   padding: 12px 0px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   width: 95%;
   margin-left: 5px;

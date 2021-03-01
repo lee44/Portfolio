@@ -349,7 +349,7 @@ li{
 /*Start About*/
 .about .description{
     background-color: $backgroundColor;
-    padding: 2rem;
+    padding: 3rem;
     border: $border_width solid $primaryColor;
     border-radius: $border_radius;
 }
@@ -373,9 +373,14 @@ li{
     
     /* Container around content */
     .box {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
+        position: relative;
+        width: 50%;
+        &.left{
+            padding: 10px 40px 10px 0px;
+        }
+        &.right{
+            padding: 10px 0 10px 40px;
+        }
     }
     
     /* The circles on the timeline */
@@ -491,10 +496,10 @@ li{
     border: $border_width solid $primaryColor;
     border-radius: $border_radius;
     background-color: $backgroundColor;
-    
+    padding: 3rem 0;
     .items{
         @include flex(column,center);
-        margin: 1rem 2rem;
+        padding: 2rem 0;
     }
     
     p{
@@ -613,6 +618,7 @@ li{
             color: white;
             padding: 12px 0px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
             width: 95%;
             margin-right: 5px;
@@ -629,6 +635,7 @@ li{
             color: white;
             padding: 12px 0px;
             font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
             width: 95%;
             margin-left: 5px;
