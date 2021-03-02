@@ -49,8 +49,13 @@ a {
   color: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
 p {
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 hr {
@@ -76,7 +81,6 @@ hr {
   font-size: 3.5rem;
   color: #8067ff;
   text-transform: uppercase;
-  font-weight: 300;
   position: relative;
   margin: 0 0 1rem 0;
 }
@@ -171,7 +175,7 @@ header {
 }
 
 .top-nav .nav-link {
-  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 2rem;
   padding: 1rem;
 }
@@ -204,7 +208,6 @@ li {
 }
 
 .hidden-nav-link {
-  font-family: 2rem;
   font-size: 5rem;
   padding: 1rem;
 }
@@ -303,23 +306,25 @@ li {
 }
 
 .landing-page h1 {
+  font-family: "Rockwell", sans-serif;
   font-size: 10rem;
+  font-weight: 900;
   background: linear-gradient(to right, #da22ff, #9733ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Rockwell',sans-serif;
   padding: 1rem;
   user-select: none;
 }
 
 .landing-page h6 {
+  font-family: "Rockwell", sans-serif;
   font-size: 8rem;
-  font-family: 'Rockwell',sans-serif;
+  font-weight: 900;
   line-height: 7.5rem;
 }
 
 .landing-page .separator {
-  margin: 3rem auto;
+  margin: 2rem auto;
   height: 1rem;
   background: linear-gradient(to right, #da22ff, #9733ee);
   border: none;
@@ -450,14 +455,14 @@ li {
 
 .timeline .right div:nth-child(1) {
   color: #8067ff;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.5rem;
   text-align: start;
 }
 
 .timeline .right div:nth-child(2) {
   color: white;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 2rem;
   margin: 5px 0;
 }
@@ -613,7 +618,7 @@ li {
   font-size: 1.8rem;
 }
 
-.portfolio-item h3 {
+.portfolio-item p {
   min-height: 40px;
   margin: 0px 10px 0 10px;
   font-size: 1.5rem;
@@ -630,7 +635,7 @@ li {
 
 .portfolio-item .language span {
   font-size: 1.5rem;
-  background-color: #675CBF;
+  background-color: #9782ff;
   padding: 5px;
   border-radius: 5px;
   margin: 2.5px 2.5px;
@@ -649,20 +654,21 @@ li {
 }
 
 .portfolio-item .source-container .github-btn {
-  background-color: #530053;
+  background-color: #8067ff;
   border: 0;
   border-radius: 5px;
   color: white;
   padding: 12px 0px;
-  font-size: 16px;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
   cursor: pointer;
   width: 95%;
   margin-right: 5px;
 }
 
 .portfolio-item .source-container .github-btn:hover {
-  background-color: #532253;
+  background-color: #9782ff;
 }
 
 .portfolio-item .source-container .live-btn {
@@ -671,8 +677,9 @@ li {
   border-radius: 5px;
   color: white;
   padding: 12px 0px;
-  font-size: 16px;
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
   cursor: pointer;
   width: 95%;
   margin-left: 5px;
@@ -761,13 +768,15 @@ li {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
+  font-weight: 500;
   margin: 1rem 0;
 }
 
 .contact input[type="submit"]:hover {
   color: white;
-  background-color: #8067ff;
+  background-color: #9782ff;
 }
 
 .contact .social-container {
@@ -840,7 +849,7 @@ li {
   left: 0;
   right: 0;
   width: 100px;
-  bottom: 5%;
+  bottom: 1%;
   margin: 0 auto;
   text-align: center;
 }
@@ -923,7 +932,7 @@ li {
     grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
   }
   .up {
-    right: 1rem;
+    right: 1%;
     width: 4rem;
     height: 4rem;
   }
@@ -1015,13 +1024,13 @@ li {
     grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
   }
   .up {
-    right: .9rem;
+    right: 1%;
     width: 4rem;
     height: 4rem;
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 450px) {
   .landing-page h1 {
     font-size: 5rem;
     line-height: 5rem;
@@ -1035,6 +1044,9 @@ li {
   }
   .portfolio-container {
     grid-template-columns: 1fr;
+  }
+  .portfolio-container img {
+    object-fit: cover;
   }
   .contact {
     height: 140vh;
